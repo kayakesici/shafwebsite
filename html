@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TypeThree - Premium Curly Haircare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #000;
+      --secondary-color: #5C5C5C;
+      --bg-light: #FAF7F5;
+      --bg-dark: #E8E6E4;
+      --accent-color: #C4A77D;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Work Sans', sans-serif;
+      color: var(--primary-color);
+      background: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background: var(--bg-light);
+      padding: 120px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 1rem;
+    }
+    header p {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      font-size: 1.2rem;
+      color: var(--secondary-color);
+    }
+    header button {
+      background: var(--primary-color);
+      color: #fff;
+      border: none;
+      padding: 14px 36px;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    header button:hover {
+      background: #333;
+    }
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 5%;
+      gap: 60px;
+    }
+    .text-block {
+      flex: 1 1 400px;
+      max-width: 500px;
+    }
+    .text-block h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .text-block p {
+      font-size: 1rem;
+      color: var(--secondary-color);
+      line-height: 1.8;
+    }
+    .image-placeholder {
+      flex: 1 1 400px;
+      max-width: 500px;
+      height: 350px;
+      background: var(--bg-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-style: italic;
+      border-radius: 8px;
+    }
+    .shop-section {
+      background: var(--bg-light);
+      padding: 100px 5%;
+      text-align: center;
+    }
+    .shop-section h2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+    .shop-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+    .shop-item {
+      background: #fff;
+      padding: 30px 20px;
+      border: 1px solid var(--bg-dark);
+      border-radius: 8px;
+      transition: box-shadow 0.3s;
+    }
+    .shop-item:hover {
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .shop-item .image-placeholder {
+      height: 180px;
+      border-radius: 6px;
+    }
+    .shop-item p {
+      margin-top: 15px;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+    .shop-section button {
+      background: var(--primary-color);
+      color: #fff;
+      border: none;
+      padding: 14px 36px;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .shop-section button:hover {
+      background: #333;
+    }
+    footer {
+      background: var(--bg-light);
+      text-align: center;
+      padding: 80px 20px;
+      font-size: 0.9rem;
+      color: var(--secondary-color);
+    }
+    footer p {
+      margin-bottom: 10px;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .text-block h2 {
+        font-size: 1.8rem;
+      }
+      section {
+        padding: 60px 5%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>For Guys Who Take Curls Seriously</h1>
+    <p>Discover expert curly haircare with TypeThree. Embrace your natural curls.</p>
+    <button>Shop Now</button>
+  </header>
+  <section>
+    <div class="image-placeholder">Image</div>
+    <div class="text-block">
+      <h2>Our Story</h2>
+      <p>TypeThree was born to provide guys with the best curly haircare, focusing on natural ingredients and sustainable packaging.</p>
+    </div>
+  </section>
+  <section>
+    <div class="text-block">
+      <h2>Our Products</h2>
+      <p>Explore a range of products specially formulated to cleanse, hydrate, and define your curls without harsh chemicals.</p>
+    </div>
+    <div class="image-placeholder">Product Images</div>
+  </section>
+  <section>
+    <div class="image-placeholder">Image</div>
+    <div class="text-block">
+      <h2>Our Mission</h2>
+      <p>We believe every guy should feel confident embracing his natural texture. Our mission is to make curly haircare simple and effective.</p>
+    </div>
+  </section>
+  <div class="shop-section">
+    <h2>Shop Now</h2>
+    <div class="shop-items">
+      <div class="shop-item">
+        <div class="image-placeholder">Conditioner</div>
+        <p>Hydrating Conditioner</p>
+      </div>
+      <div class="shop-item">
+        <div class="image-placeholder">Styling Cream</div>
+        <p>Curl Defining Cream</p>
+      </div>
+      <div class="shop-item">
+        <div class="image-placeholder">Shampoo</div>
+        <p>Gentle Cleanse Shampoo</p>
+      </div>
+    </div>
+    <button>View All Products</button>
+  </div>
+  <footer>
+    <p>&copy; 2025 TypeThree. All rights reserved.</p>
+    <p>Privacy Policy | Terms of Service</p>
+  </footer>
+</body>
+</html>
