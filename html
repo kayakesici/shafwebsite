@@ -7,159 +7,161 @@
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-color: #000;
-      --secondary-color: #5C5C5C;
-      --bg-light: #FAF7F5;
-      --bg-dark: #E8E6E4;
-      --accent-color: #C4A77D;
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      --primary-color: #3D2C27;
+      --secondary-color: #6F6F6F;
+      --hero-bg: #EDE7E1;
+      --text-light: #FFFFFF;
+      --button-bg: #3D2C27;
+      --button-hover: #5C4339;
+      --accent-color: #BFA178;
     }
     body {
+      margin: 0;
       font-family: 'Work Sans', sans-serif;
-      color: var(--primary-color);
       background: #fff;
-      line-height: 1.6;
+      color: var(--primary-color);
     }
     header {
-      background: var(--bg-light);
-      padding: 120px 20px;
+      background: var(--hero-bg);
       text-align: center;
+      padding: 160px 20px;
+      position: relative;
     }
     header h1 {
       font-size: 3rem;
       font-weight: 700;
-      letter-spacing: -0.5px;
+      color: var(--text-light);
+      text-transform: uppercase;
       margin-bottom: 1rem;
     }
     header p {
+      font-size: 1rem;
+      color: var(--text-light);
+      margin-bottom: 2rem;
       max-width: 600px;
-      margin: 0 auto 2rem;
-      font-size: 1.2rem;
-      color: var(--secondary-color);
+      margin-left: auto;
+      margin-right: auto;
     }
     header button {
-      background: var(--primary-color);
-      color: #fff;
+      background: var(--button-bg);
+      color: var(--text-light);
       border: none;
-      padding: 14px 36px;
-      font-size: 1rem;
-      letter-spacing: 1px;
+      padding: 12px 32px;
       cursor: pointer;
-      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: background 0.3s;
     }
     header button:hover {
-      background: #333;
+      background: var(--button-hover);
+    }
+    nav {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      max-width: 1200px;
+    }
+    nav .logo {
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: var(--primary-color);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: 500;
     }
     section {
+      padding: 100px 10%;
       display: flex;
       flex-wrap: wrap;
+      gap: 50px;
       align-items: center;
-      justify-content: center;
-      padding: 100px 5%;
-      gap: 60px;
     }
     .text-block {
       flex: 1 1 400px;
-      max-width: 500px;
     }
     .text-block h2 {
-      font-size: 2.2rem;
+      font-size: 2rem;
       margin-bottom: 20px;
-      font-weight: 600;
     }
     .text-block p {
-      font-size: 1rem;
       color: var(--secondary-color);
-      line-height: 1.8;
+      font-size: 1rem;
+      line-height: 1.7;
     }
     .image-placeholder {
       flex: 1 1 400px;
-      max-width: 500px;
+      background: var(--hero-bg);
       height: 350px;
-      background: var(--bg-dark);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #999;
-      font-style: italic;
       border-radius: 8px;
+      color: var(--secondary-color);
     }
     .shop-section {
-      background: var(--bg-light);
-      padding: 100px 5%;
+      background: var(--hero-bg);
       text-align: center;
+      padding: 120px 10%;
     }
     .shop-section h2 {
-      font-size: 2.5rem;
-      font-weight: 600;
+      font-size: 2.2rem;
       margin-bottom: 40px;
     }
     .shop-items {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 40px;
-      margin-bottom: 50px;
     }
     .shop-item {
       background: #fff;
+      border: 1px solid #ddd;
       padding: 30px 20px;
-      border: 1px solid var(--bg-dark);
       border-radius: 8px;
       transition: box-shadow 0.3s;
     }
     .shop-item:hover {
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
     .shop-item .image-placeholder {
       height: 180px;
-      border-radius: 6px;
-    }
-    .shop-item p {
-      margin-top: 15px;
-      font-weight: 500;
-      font-size: 1rem;
-    }
-    .shop-section button {
-      background: var(--primary-color);
-      color: #fff;
-      border: none;
-      padding: 14px 36px;
-      font-size: 1rem;
-      letter-spacing: 1px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .shop-section button:hover {
-      background: #333;
+      margin-bottom: 15px;
     }
     footer {
-      background: var(--bg-light);
+      background: var(--hero-bg);
       text-align: center;
-      padding: 80px 20px;
+      padding: 60px 20px;
       font-size: 0.9rem;
       color: var(--secondary-color);
     }
-    footer p {
-      margin-bottom: 10px;
-    }
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      .text-block h2 {
-        font-size: 1.8rem;
-      }
-      section {
-        padding: 60px 5%;
-      }
+      header h1 { font-size: 2rem; }
+      .text-block h2 { font-size: 1.6rem; }
+      section { padding: 60px 5%; }
     }
   </style>
 </head>
 <body>
+  <nav>
+    <div class="logo">typeThree</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Our Story</a></li>
+    </ul>
+  </nav>
   <header>
     <h1>For Guys Who Take Curls Seriously</h1>
     <p>Discover expert curly haircare with TypeThree. Embrace your natural curls.</p>
@@ -169,13 +171,13 @@
     <div class="image-placeholder">Image</div>
     <div class="text-block">
       <h2>Our Story</h2>
-      <p>TypeThree was born to provide guys with the best curly haircare, focusing on natural ingredients and sustainable packaging.</p>
+      <p>TypeThree was born to provide premium products designed for guys with natural curls. We believe in simple, honest haircare that works.</p>
     </div>
   </section>
   <section>
     <div class="text-block">
       <h2>Our Products</h2>
-      <p>Explore a range of products specially formulated to cleanse, hydrate, and define your curls without harsh chemicals.</p>
+      <p>Explore our curated line of conditioners, creams and shampoos made to nourish and define every curl type.</p>
     </div>
     <div class="image-placeholder">Product Images</div>
   </section>
@@ -183,7 +185,7 @@
     <div class="image-placeholder">Image</div>
     <div class="text-block">
       <h2>Our Mission</h2>
-      <p>We believe every guy should feel confident embracing his natural texture. Our mission is to make curly haircare simple and effective.</p>
+      <p>TypeThree is on a mission to help guys everywhere embrace their curls with confidence and style.</p>
     </div>
   </section>
   <div class="shop-section">
@@ -202,11 +204,9 @@
         <p>Gentle Cleanse Shampoo</p>
       </div>
     </div>
-    <button>View All Products</button>
   </div>
   <footer>
     <p>&copy; 2025 TypeThree. All rights reserved.</p>
-    <p>Privacy Policy | Terms of Service</p>
   </footer>
 </body>
 </html>
